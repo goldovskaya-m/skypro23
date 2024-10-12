@@ -12,22 +12,21 @@ import java.util.List;
 @RestController
 @RequestMapping("/store/order/")
 public class BasketController {
+    private final BasketService basketService;
 
-        private final BasketService basketService;
-
-        public BasketController(BasketService basketService) {
-            this.basketService = basketService;
-        }
-
-        @GetMapping("/add")
-        public void addItems(@RequestParam("items") ArrayList<Integer> items) {
-            basketService.addItems(items);
-        }
-
-        @GetMapping("/get")
-        public List<Integer> getItems() {
-            return basketService.getItems();
-
-        }
+    public BasketController(BasketService basketService) {
+        this.basketService = basketService;
     }
 
+    @GetMapping("/add")
+    public void addItems(@RequestParam("items") ArrayList<Integer> items) {
+
+        basketService.addItems(items);
+    }
+
+    @GetMapping("/get")
+    public List<Integer> getItems() {
+        return basketService.getItems();
+
+    }
+}

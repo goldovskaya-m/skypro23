@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Skypro23Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Skypro23Application.class, args);
+		SpringApplication.run(Skypro23Application.class,args);
 	}
 
 }
